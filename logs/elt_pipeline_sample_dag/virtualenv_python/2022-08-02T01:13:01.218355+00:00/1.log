@@ -1,0 +1,74 @@
+[2022-08-02 01:13:10,069] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: elt_pipeline_sample_dag.virtualenv_python 2022-08-02T01:13:01.218355+00:00 [queued]>
+[2022-08-02 01:13:10,092] {taskinstance.py:876} INFO - Dependencies all met for <TaskInstance: elt_pipeline_sample_dag.virtualenv_python 2022-08-02T01:13:01.218355+00:00 [queued]>
+[2022-08-02 01:13:10,092] {taskinstance.py:1067} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-02 01:13:10,093] {taskinstance.py:1068} INFO - Starting attempt 1 of 4
+[2022-08-02 01:13:10,093] {taskinstance.py:1069} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-02 01:13:10,102] {taskinstance.py:1087} INFO - Executing <Task(PythonVirtualenvOperator): virtualenv_python> on 2022-08-02T01:13:01.218355+00:00
+[2022-08-02 01:13:10,113] {standard_task_runner.py:52} INFO - Started process 142 to run task
+[2022-08-02 01:13:10,118] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'elt_pipeline_sample_dag', 'virtualenv_python', '2022-08-02T01:13:01.218355+00:00', '--job-id', '55', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/api_pipeline_dag.py', '--cfg-path', '/tmp/tmp1ry3tk5z', '--error-file', '/tmp/tmpkip3zws9']
+[2022-08-02 01:13:10,119] {standard_task_runner.py:77} INFO - Job 55: Subtask virtualenv_python
+[2022-08-02 01:13:10,167] {logging_mixin.py:104} INFO - Running <TaskInstance: elt_pipeline_sample_dag.virtualenv_python 2022-08-02T01:13:01.218355+00:00 [running]> on host b9809cf3c045
+[2022-08-02 01:13:10,221] {taskinstance.py:1282} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=***@example.com
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=elt_pipeline_sample_dag
+AIRFLOW_CTX_TASK_ID=virtualenv_python
+AIRFLOW_CTX_EXECUTION_DATE=2022-08-02T01:13:01.218355+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-08-02T01:13:01.218355+00:00
+[2022-08-02 01:13:10,224] {process_utils.py:135} INFO - Executing cmd: virtualenv /tmp/venvmt5hgn5n
+[2022-08-02 01:13:10,233] {process_utils.py:139} INFO - Output:
+[2022-08-02 01:13:14,525] {process_utils.py:143} INFO - created virtual environment CPython3.6.15.final.0-64 in 3247ms
+[2022-08-02 01:13:14,526] {process_utils.py:143} INFO -   creator CPython3Posix(dest=/tmp/venvmt5hgn5n, clear=False, no_vcs_ignore=False, global=False)
+[2022-08-02 01:13:14,533] {process_utils.py:143} INFO -   seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=/home/***/.local/share/virtualenv)
+[2022-08-02 01:13:14,534] {process_utils.py:143} INFO -     added seed packages: pip==21.1.1, setuptools==56.0.0, wheel==0.36.2
+[2022-08-02 01:13:14,534] {process_utils.py:143} INFO -   activators BashActivator,CShellActivator,FishActivator,PowerShellActivator,PythonActivator,XonshActivator
+[2022-08-02 01:13:14,653] {process_utils.py:135} INFO - Executing cmd: /tmp/venvmt5hgn5n/bin/pip install boto3 pandas==1.1.5
+[2022-08-02 01:13:14,688] {process_utils.py:139} INFO - Output:
+[2022-08-02 01:13:31,528] {process_utils.py:143} INFO - Collecting boto3
+[2022-08-02 01:13:31,635] {process_utils.py:143} INFO -   Downloading boto3-1.23.10-py3-none-any.whl (132 kB)
+[2022-08-02 01:13:32,587] {process_utils.py:143} INFO - Collecting pandas==1.1.5
+[2022-08-02 01:13:32,610] {process_utils.py:143} INFO -   Downloading pandas-1.1.5-cp36-cp36m-manylinux1_x86_64.whl (9.5 MB)
+[2022-08-02 01:13:35,149] {process_utils.py:143} INFO - Collecting pytz>=2017.2
+[2022-08-02 01:13:35,178] {process_utils.py:143} INFO -   Downloading pytz-2022.1-py2.py3-none-any.whl (503 kB)
+[2022-08-02 01:13:35,365] {process_utils.py:143} INFO - Collecting python-dateutil>=2.7.3
+[2022-08-02 01:13:35,386] {process_utils.py:143} INFO -   Downloading python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+[2022-08-02 01:13:37,139] {process_utils.py:143} INFO - Collecting numpy>=1.15.4
+[2022-08-02 01:13:37,161] {process_utils.py:143} INFO -   Downloading numpy-1.19.5-cp36-cp36m-manylinux2010_x86_64.whl (14.8 MB)
+[2022-08-02 01:13:40,706] {process_utils.py:143} INFO - Collecting six>=1.5
+[2022-08-02 01:13:40,743] {process_utils.py:143} INFO -   Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+[2022-08-02 01:13:40,934] {process_utils.py:143} INFO - Collecting jmespath<2.0.0,>=0.7.1
+[2022-08-02 01:13:40,959] {process_utils.py:143} INFO -   Downloading jmespath-0.10.0-py2.py3-none-any.whl (24 kB)
+[2022-08-02 01:13:41,147] {process_utils.py:143} INFO - Collecting s3transfer<0.6.0,>=0.5.0
+[2022-08-02 01:13:41,173] {process_utils.py:143} INFO -   Downloading s3transfer-0.5.2-py3-none-any.whl (79 kB)
+[2022-08-02 01:13:46,549] {process_utils.py:143} INFO - Collecting botocore<1.27.0,>=1.26.10
+[2022-08-02 01:13:46,571] {process_utils.py:143} INFO -   Downloading botocore-1.26.10-py3-none-any.whl (8.8 MB)
+[2022-08-02 01:13:48,954] {process_utils.py:143} INFO - Collecting urllib3<1.27,>=1.25.4
+[2022-08-02 01:13:49,013] {process_utils.py:143} INFO -   Downloading urllib3-1.26.11-py2.py3-none-any.whl (139 kB)
+[2022-08-02 01:13:50,620] {process_utils.py:143} INFO - Installing collected packages: six, urllib3, python-dateutil, jmespath, botocore, s3transfer, pytz, numpy, pandas, boto3
+[2022-08-02 01:14:00,793] {process_utils.py:143} INFO - Successfully installed boto3-1.23.10 botocore-1.26.10 jmespath-0.10.0 numpy-1.19.5 pandas-1.1.5 python-dateutil-2.8.2 pytz-2022.1 s3transfer-0.5.2 six-1.16.0 urllib3-1.26.11
+[2022-08-02 01:14:01,058] {process_utils.py:143} INFO - WARNING: You are using pip version 21.1.1; however, version 21.3.1 is available.
+[2022-08-02 01:14:01,058] {process_utils.py:143} INFO - You should consider upgrading via the '/tmp/venvmt5hgn5n/bin/python -m pip install --upgrade pip' command.
+[2022-08-02 01:14:01,266] {process_utils.py:135} INFO - Executing cmd: /tmp/venvmt5hgn5n/bin/python /tmp/venvmt5hgn5n/script.py /tmp/venvmt5hgn5n/script.in /tmp/venvmt5hgn5n/script.out /tmp/venvmt5hgn5n/string_args.txt
+[2022-08-02 01:14:01,275] {process_utils.py:139} INFO - Output:
+[2022-08-02 01:14:05,484] {process_utils.py:143} INFO - /tmp/venvmt5hgn5n/lib/python3.6/site-packages/boto3/compat.py:88: PythonDeprecationWarning: Boto3 will no longer support Python 3.6 starting May 30, 2022. To continue receiving service updates, bug fixes, and security updates please upgrade to Python 3.7 or later. More information can be found here: https://aws.amazon.com/blogs/developer/python-support-policy-updates-for-aws-sdks-and-tools/
+[2022-08-02 01:14:05,487] {process_utils.py:143} INFO -   warnings.warn(warning, PythonDeprecationWarning)
+[2022-08-02 01:14:05,487] {process_utils.py:143} INFO - Extracted from s3a://victortest1/order_extract.csv
+[2022-08-02 01:14:05,488] {process_utils.py:143} INFO - <class 'pandas.core.frame.DataFrame'>
+[2022-08-02 01:14:05,488] {process_utils.py:143} INFO - RangeIndex: 4 entries, 0 to 3
+[2022-08-02 01:14:05,488] {process_utils.py:143} INFO - Data columns (total 3 columns):
+[2022-08-02 01:14:05,493] {process_utils.py:143} INFO -  #   Column               Non-Null Count  Dtype
+[2022-08-02 01:14:05,495] {process_utils.py:143} INFO - ---  ------               --------------  -----
+[2022-08-02 01:14:05,495] {process_utils.py:143} INFO -  0   1                    4 non-null      int64
+[2022-08-02 01:14:05,496] {process_utils.py:143} INFO -  1   Backordered          4 non-null      object
+[2022-08-02 01:14:05,496] {process_utils.py:143} INFO -  2   2020-06-01 12:00:00  4 non-null      object
+[2022-08-02 01:14:05,497] {process_utils.py:143} INFO - dtypes: int64(1), object(2)
+[2022-08-02 01:14:05,501] {process_utils.py:143} INFO - memory usage: 224.0+ bytes
+[2022-08-02 01:14:05,501] {process_utils.py:143} INFO - None
+[2022-08-02 01:14:05,501] {process_utils.py:143} INFO - Put into s3a://lazyinvest-raw-useast2-678400887966-dev/raw_order_extract.csv
+[2022-08-02 01:14:05,503] {process_utils.py:143} INFO - Finished!
+[2022-08-02 01:14:06,469] {python.py:151} INFO - Done. Returned value was: None
+[2022-08-02 01:14:06,489] {taskinstance.py:1191} INFO - Marking task as SUCCESS. dag_id=elt_pipeline_sample_dag, task_id=virtualenv_python, execution_date=20220802T011301, start_date=20220802T011310, end_date=20220802T011406
+[2022-08-02 01:14:06,540] {taskinstance.py:1245} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-08-02 01:14:06,558] {local_task_job.py:151} INFO - Task exited with return code 0
